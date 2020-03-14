@@ -1,30 +1,25 @@
 
-# Sample project to understand how to group go routines
+# go-routines
+
+Sample project to understand how to group go routines
 
 ## Run
-
-### No groups
-```
-go run nogroups.go
+```shell
+go run {example-folder}/main.go
 ```
 
-### Default WaitGroup
+### Detect race conditions
+#### without mutex
+```shell
+go run -race mutex/without/main.go
 ```
-go run waitgroup.go
-```
-
-### Default ErrorGroup
-```
-go run waitgroup.go
-```
-
-### Default ErrorGroup with context
-```
-go run withctx.go
+#### with mutex
+```shell
+go run -race mutex/with/main.go
 ```
 
 ---
 
 ## Links
-
-* https://medium.com/swlh/managing-groups-of-gorutines-in-go-ee7523e3eaca
+- https://medium.com/swlh/managing-groups-of-gorutines-in-go-ee7523e3eaca
+- https://medium.com/rungo/anatomy-of-channels-in-go-concurrency-in-go-1ec336086adb
